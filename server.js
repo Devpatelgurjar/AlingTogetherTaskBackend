@@ -10,15 +10,18 @@ connectDB();
 
 const app = express();
 
-// CORS Configuration - supports both development and production
+// CORS Configuratio
 const corsOptions = {
     origin: function (origin, callback) {
-        // Allow requests with no origin (like mobile apps or curl requests)
+        // Allow requests with no origin 
         if (!origin) return callback(null, true);
 
         const allowedOrigins = [
             'http://localhost:5173',
             'http://localhost:3000',
+            'https://alingtogether-git-main-devpatels-projects-a5f2a7c7.vercel.app/',
+            'https://alingtogether-o5ufxvdrs-devpatels-projects-a5f2a7c7.vercel.app/',
+            'https://alingtogether.vercel.app/',
             process.env.FRONTEND_URL // Set this in Render to your Vercel URL
         ].filter(Boolean); // Remove undefined values
 
